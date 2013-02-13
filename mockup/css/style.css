@@ -46,11 +46,21 @@
 
 }
 
+@font-face {
+    font-family: 'Stacatto 222 BT';
+    src: url('fonts/tt0610m-webfont.eot');
+    src: url('fonts/tt0610m-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tt0610m-webfont.woff') format('woff'),
+         url('fonts/tt0610m-webfont.ttf') format('truetype'),
+         url('fonts/tt0610m-webfont.svg#staccato222_btregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 body {
 	font-family: 'Droid Serif', Times New Roman, Helvetica;
-	background: url('../img/background.jpg');
+	background: url('../img/background.png');
 	font-style: italic;
 }
 
