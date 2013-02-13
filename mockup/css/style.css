@@ -50,7 +50,7 @@
 
 body {
 	font-family: 'Droid Serif', Times New Roman, Helvetica;
-	background: url('../img/background4-1.jpg');
+	background: url('../img/background.jpg');
 	font-style: italic;
 }
 
@@ -70,7 +70,7 @@ a:hover {
 
 .nav-pills > li > a:hover {
 	background-color: #FFCD61;
-  background: url('../img/ribbon/middle-red.png') 0 -2px;
+  background: url('../img/ribbon/middle-brown.png') 0 -2px;
 /*  color: #222;*/
 }
 
@@ -81,6 +81,7 @@ a:hover {
   background-color: #8c4122;
   background-color: #604836;
   background: url('../img/ribbon/middle-brown.png');
+  background: url('../img/ribbon/middle.png') 0 -2px;
 /*	background-color: #d9b528;*/
 }
 
