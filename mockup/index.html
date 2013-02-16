@@ -295,12 +295,12 @@
 			};
 
 		    $(document).ready(function() {
-				$("#hotspot1").makeHotspot(imagelist["55"]);
+				$("#hotspot").makeHotspot(imagelist["55"]);
 				$("#slider").elastislide();
 
 				$("#slider li a").click(function() {
 					var href = $(this).attr('href').substr(1);
-					$("#hotspot1").makeHotspot(imagelist[href]);
+					$("#hotspot").makeHotspot(imagelist[href]);
 				});
 
 		      	initialize();
@@ -308,13 +308,12 @@
 		    });
 	    </script>
 	</head>
-	<body><div style="overflow: hidden; position: relative;">
+	<body><div id="main">
 		<div class="container" style="position: relative;">
-			<div style="position: absolute; top: 1.5em; left: -1000px; right: -1000px; height: 160px; background: url('img/background3.png'); z-index:-1; box-shadow: inset 0px 0px 5px 2px #000;"></div>
-
+			<div class="dark-background" id="top-background"></div>
 
 			<div class="row">
-				<div class="span8" style="margin-top: 2em;">
+				<div class="span8" id="top-slider-container">
 					<div class="row">
 						<div class="span8">
 							<ul id="slider">
@@ -342,17 +341,15 @@
 						</div>
 					</div>
 
-					<div class="row" style="margin-top: 2.5em;">
+					<div class="row" id="item-container">
 						<div class="span8">
 							<div class="row">
-								<div class="span8" style="padding: 0 25px; background: url(img/scroll640.png) 0 0 no-repeat; min-height: 800px;" >
+								<div class="span8" id="item-furniture" >
 									<ul class="thumbnails">
-										<li class="" style="width: 490px; position: relative; margin-left: 70px;">
-											<h3 id="title-box" style="color: #fff; margin-top: 25px; text-shadow: #222 1px 1px 3px;">№51</h3>
-
-											<div style="width: 100%; text-align: center; margin-top: 50px; padding-bottom: 48px;">
-												<div id="hotspot1" class="hs-wrap hs-loading" style="display: inline-block;">
-												</div>
+										<li>
+											<h3 id="title-box">№51</h3>
+											<div id="hotspot-container">
+												<div id="hotspot" class="hs-wrap hs-loading"></div>
 											</div>
 										</li>
 									</ul>
@@ -363,16 +360,15 @@
 				</div>
 
 				<div class="span4">
-					<div class="span4" style="background-color: #efdbc2; background-color: rgba(255, 255, 255, 0.5); border-left: #fff solid 1px; border-right: #fff solid 1px; position: absolute; top: 0; bottom: 0; right: 0; z-index: -1;"></div>
+					<div class="span4" id="nav-background"></div>
 
-					<h1 style="font-family: 'Stacatto 222 BT'; font-size: 64px; color: #111; margin: 0 0.5em; padding-top: 1em;min-height: 120px; text-shadow: 0px 1px 1px #ccc, 0px -1px 1px #000;">Comodita</h1>
+					<h1 id="logo">Comodita</h1>
 
 					<div class="row">
 						<div class="span4">
-							<br><br>
-							<div style="margin: 0 1em;">
+							<div class="nav-section">
 								<h4>Каталог продукции</h4>
-								<ul class="nav nav-pills nav-stacked" style="font-size: small;">
+								<ul class="nav nav-pills nav-stacked">
 									<li class="active"><a href="#" title="">Избранное</a></li>
 									<li><a href="#" title="">Спальни и шкафы</a></li>
 									<li><a href="#" title="">Кухни</a></li>
@@ -382,46 +378,48 @@
 								</ul>
 							</div>
 
-							<div style="margin: 0 1em;">
+							<div class="nav-section">
 								<h4>Наши контакты</h4>
-									<div style="font-size: small;">
-										<p>
-											<span style="background: url('img/icons/mail.png') left center no-repeat; padding: 2px 0 0 20px;">kurud@inbox.ru</span><br>
-											<span style="background: url('img/icons/mobile-phone.png') left center no-repeat; padding: 3px 0 0 20px;">+38 (097) 4984531</span><br>
-										   	<span style="background: url('img/icons/mobile-phone.png') left center no-repeat; padding: 3px 0 0 20px;">+38 (093) 8809928</span><br><br>
-										</p>
-									</div>
+								<div>
+									<p>
+										<span class="icon mail">kurud@inbox.ru</span><br>
+										<span class="icon mobile">+38 (097) 498 45 31</span><br>
+									   	<span class="icon mobile">+38 (093) 880 99 28</span><br><br>
+									</p>
+								</div>
 
-								<h4 style="font-style: italic;">Наш салон</h4>
+								<h4>Наш салон</h4>
+								<div>
 									<p>Киевская обл., с. Петропавловская Борщаговка, ул. Петропавловская, 6<br>
 									   Т. Ц. 4ROOM</p>
 
-									<div style="width:100%; height:200px; border-radius: 8px; overflow: hidden;">
-										<div id="map_canvas" style="width:100%; height:100%;"></div>
+									<div id="map-container">
+										<div id="map_canvas"></div>
 									</div>
+								</div>
 							</div>
 						</div>						
 					</div>
 				</div>				
 			</div>
 
-			<footer style="font-size: small; margin-top: 20px; position: relative; z-index: 1;">
-				<div style="position: absolute; bottom: -1em; left: -1000px; right: -1000px; top: 0; background: url('img/background3.png'); box-shadow: inset 0px 0px 5px 2px #000; z-index: -1;"></div>
+			<footer>
+				<div class="dark-background" id="footer-background"></div>
 
-				<div class="row" style="color: white; padding: 2.5em 0 2em 0;">
+				<div class="row" id="footer-container">
 					<div class="span1"><img src="img/icons/idea.png" alt=""></div>
 					<div class="span3">
-						<p style="margin-right: 8px;">Производство всей нашей мебели реализовывается в массивной древесине и делается руками  опытных мастеров,  и с использованием традиционных инструментов.</p>
+						<p>Производство всей нашей мебели реализовывается в массивной древесине и делается руками  опытных мастеров,  и с использованием традиционных инструментов.</p>
 					</div>
 
 					<div class="span1"><img src="img/icons/brush.png" alt=""></div>
 					<div class="span3">
-						<p style="margin-right: 8px;">Контуры, цвет и атмосфера прошлых веков снова доступны для тех, кто ценит аромат собственного дома, уголки которого хранят старину и возвращают теплоту уюта.</p>
+						<p>Контуры, цвет и атмосфера прошлых веков снова доступны для тех, кто ценит аромат собственного дома, уголки которого хранят старину и возвращают теплоту уюта.</p>
 					</div>
 
 					<div class="span1"><img src="img/icons/taxi.png" alt=""></div>
 					<div class="span3">
-						<p style="margin-right: 8px;">Приоритетами в работе с нашими клиентами являются превосходное качество мебели и стабильность поставок. Любой покупатель является важным партнером для компании.</p>
+						<p>Приоритетами в работе с нашими клиентами являются превосходное качество мебели и стабильность поставок. Любой покупатель является важным партнером для компании.</p>
 					</div>
 				</div>
 			</footer>
