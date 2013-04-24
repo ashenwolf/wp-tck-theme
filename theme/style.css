@@ -70,6 +70,45 @@ Version:        0.1.0
     font-weight: normal;
     font-style: normal;
 }
+/*
+@font-face {
+    font-family: 'Tangerine';
+    src: url('fonts/Tangerine_Regular-webfont.eot');
+    src: url('fonts/Tangerine_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Tangerine_Regular-webfont.woff') format('woff'),
+         url('fonts/Tangerine_Regular-webfont.ttf') format('truetype'),
+         url('fonts/Tangerine_Regular-webfont.svg#TangerineRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TangerineBold';
+    src: url('fonts/Tangerine_Bold-webfont.eot');
+    src: url('fonts/Tangerine_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Tangerine_Bold-webfont.woff') format('woff'),
+         url('fonts/Tangerine_Bold-webfont.ttf') format('truetype'),
+         url('fonts/Tangerine_Bold-webfont.svg#TangerineBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+
+@font-face {
+    font-family: 'CAC Champagne';
+    src: url('fonts/cac_champagne-webfont.eot');
+    src: url('fonts/cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cac_champagne-webfont.woff') format('woff'),
+         url('fonts/cac_champagne-webfont.ttf') format('truetype'),
+         url('fonts/cac_champagne-webfont.svg#CACChampagneRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 /*
 //  page structure
@@ -129,6 +168,10 @@ a.thumbnail.active {
           box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
 
+#slider {
+	min-height: 130px;
+}
+
 #slider > li {
 	min-width: 120px;
 	min-height: 120px;
@@ -141,15 +184,23 @@ a.thumbnail.active {
 /*
 //  item
 */
+article {
+	margin-left: -25px;
+}
+
+header h3 {
+ 	margin-left: 48px;
+}
 
 #item-container {
-	margin-top: 2.5em;
+	margin-top: 0;
 }
 
 #item-furniture {
 	padding: 0 25px; 
 	background: url(img/scroll640.png) 0 0 no-repeat; 
 	min-height: 800px;
+	position: relative;
 }
 
 #item-furniture ul > li {
@@ -181,13 +232,20 @@ a.thumbnail.active {
 }
 
 #logo {
-	font-family: 'Stacatto 222 BT'; 
-	font-size: 64px;
-	color: #111;
 	margin: 0 0.5em;
 	padding-top: 1em;
 	min-height: 120px;
+}
+
+#logo, #logo a {
+	font-family: 'CAC Champagne', Times New Roman, sans; 
+	font-size: 80px;
+	color: #111;
 	text-shadow: 0px 1px 1px #ccc, 0px -1px 1px #000;
+	text-decoration: none;
+	display: block;
+	font-weight: normal;
+	font-style: normal;
 }
 
 .nav-section {
@@ -237,12 +295,23 @@ a.thumbnail.active {
 #hotspot-container {
 	width: 100%;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 48px;
 	padding-bottom: 48px;
+}
+
+#image-container {
+	margin: 0 auto;
+ 	max-width: 490px;
+	max-height: 590px;
 }
 
 #hotspot {
 	display: inline-block;
+}
+
+#image-container img {
+	max-width: 490px !important;
+	max-height: 560px !important;
 }
 
 .hs-spot-hot {

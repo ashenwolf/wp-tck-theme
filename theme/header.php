@@ -10,6 +10,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
+
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -38,17 +39,18 @@
 <?php wp_head(); // wp_head ?>
 
 <script type="text/javascript">
+    var slide_num = 0;
     $(document).ready(function() {
 		//$("#hotspot").makeHotspot(imagelist["55"]);
-		$("#slider").elastislide();
+		$("#slider").elastislide({start: slide_num > 2 ? slide_num - 3 : 0 });
 
-		$("#slider li a").click(function() {
+		/*$("#slider li a").click(function() {
 			var href = $(this).attr('href').substr(1);
 			$("#hotspot").makeHotspot(imagelist[href]);
-		});
+		});*/
 
       	initialize();
-		//animateSpots();
+	animateSpots();
     });
 </script>
 
@@ -63,20 +65,32 @@
 				<div class="row">
 					<div class="span8">
 						<ul id="slider">
-							<?php while ( have_posts() ) : the_post(); ?>
-						  		<li>
-						    		<a href="<?php the_permalink(); ?>">
-						      			<?php the_post_thumbnail('thumbnail'); ?>
-						    		</a>
-						  		</li>
-							<?php endwhile; ?>
+							<?php if (is_archive()) {
+								$cat_query = $wp_query;
+								$location = 0;
+							} else {
+								$count = 0;
+								$location = $count;
+								$postid = get_the_ID();
+								$category = get_the_category();
+								$cat_query = new WP_Query('cat='.$category[0]->cat_ID.'&posts_per_page=100');
+							} ?>
+						        <?php while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
+							<?php   $count++;
+								if ($postid == get_the_ID()) { $location = $count; } 
+							?>
+						  	<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></li>
+						        <?php endwhile; ?>
 						</ul>
+						<script type="text/javascript">
+							slide_num = <?php echo $location; ?>
+						</script>
 					</div>
 				</div>
 			</div>
 			<div class="span4">
 				<div class="span4" id="nav-background"></div>
 
-				<h1 id="logo"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
+				<h1 id="logo"><a href="/"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a></h1>
 			</div>
 		</div>

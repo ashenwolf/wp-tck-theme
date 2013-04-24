@@ -5,8 +5,9 @@ var current_frame = 0;
 	$.fn.makeHotspot = function(options) {
 		var settings = $.extend({}, options);
 
-		var insertItem = $("<div class=\"hs-wrap hs-loading\"></div>");
-	 	insertItem.append($("<img />").attr("src", settings["src"]));
+		//var insertItem = $("<div class=\"hs-wrap hs-loading\"></div>");
+	 	//insertItem.append($("<img />").attr("src", settings["src"]));
+		var insertItem = $(this);
 
 		$(settings["hotspots"]).each(function(i, spot) {
 			var holder = $("<div></div>")
@@ -31,7 +32,7 @@ var current_frame = 0;
 			insertItem.append(holder);
 		});
 
-		this.html(insertItem);
+		//this.html(insertItem);
 		this.hotspot({ "show_on" : "mouseover" });
 
 		$('.hs-spot-object').on('tooltip-show', function() {
