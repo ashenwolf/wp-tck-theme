@@ -15,19 +15,18 @@
 
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/modernizr.custom.17475.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/bootstrap.js"></script>
-<!--<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/holder.js"></script>-->
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/hotspot.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jani.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquerypp.custom.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.elastislide.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/app.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/modernizr.custom.17475.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/hotspot.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jani.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquerypp.custom.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.elastislide.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/app.min.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/hotspot.css">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/elastislide.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/hotspot.min.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/elastislide.min.css" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
