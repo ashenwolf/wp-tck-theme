@@ -31,7 +31,7 @@ if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
 screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
 Cd.write("<sc"+"ript src='http://c.hit.ua/hit?i=102978&g=0&x=3"+Cp+Cr+
 "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+"'></sc"+"ript>");
-</script>
+--></script>
 </a>
 <!-- / hit.ua -->
 
